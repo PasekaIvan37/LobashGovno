@@ -1,21 +1,21 @@
-#ifndef __EQUATION_H__
+п»ї#ifndef __EQUATION_H__
 #define __EQUATION_H__
 
 #include <iostream>
 
 class Equation
 {
-	int size; //Количество уравнений
-	double** matrix; //Матрица коэффициентов уравненеия
-	double* eq; //Вектор коэффициентов, стоящих в правой части
+	int size; //РљРѕР»РёС‡РµСЃС‚РІРѕ СѓСЂР°РІРЅРµРЅРёР№
+	double** matrix; //РњР°С‚СЂРёС†Р° РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ СѓСЂР°РІРЅРµРЅРµРёСЏ
+	double* eq; //Р’РµРєС‚РѕСЂ РєРѕСЌС„С„РёС†РёРµРЅС‚РѕРІ, СЃС‚РѕСЏС‰РёС… РІ РїСЂР°РІРѕР№ С‡Р°СЃС‚Рё
 
 	double* result;
 public:
 	Equation(int s)
 	{
-		//размеры
+		//СЂР°Р·РјРµСЂС‹
 		size = s;
-		//выделение памяти под матрицу
+		//РІС‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕРґ РјР°С‚СЂРёС†Сѓ
 		matrix = new double*[size];
 		for (int i = 0; i < size; i++)
 			matrix[i] = new double[size];
@@ -23,17 +23,17 @@ public:
 		eq = new double[size];
 		result = new double[size];
 
-		//Заполнение нулями
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РЅСѓР»СЏРјРё
 		for (int i = 0; i < size; i++)
 		{
 			for (int j = 0; j < size; j++)
 				matrix[i][j] = 0;
-			eq[i] = 0; //Еще и заодно вектор заполним нулями
+			eq[i] = 0; //Р•С‰Рµ Рё Р·Р°РѕРґРЅРѕ РІРµРєС‚РѕСЂ Р·Р°РїРѕР»РЅРёРј РЅСѓР»СЏРјРё
 		}
 	}
 	~Equation()
 	{
-		//Удаление памяти
+		//РЈРґР°Р»РµРЅРёРµ РїР°РјСЏС‚Рё
 		for (int i = 0; i < size; i++)
 			delete[] matrix[i];
 

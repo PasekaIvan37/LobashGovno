@@ -1,6 +1,6 @@
-#include "equation.h"
+п»ї#include "equation.h"
 
-//Пример main'а
+//РџСЂРёРјРµСЂ main'Р°
 int main()
 {
 	int dim;
@@ -8,7 +8,7 @@ int main()
 	std::cin >> dim;
 
 	Equation eq(dim);
-	//Ввод
+	//Р’РІРѕРґ
 	eq.ReadFromConsole();
 	double* res = eq.Solve();
 

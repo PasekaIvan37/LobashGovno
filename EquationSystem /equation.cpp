@@ -37,7 +37,6 @@ double* Equation::Solve()
 void Equation::Print()
 {
 	std::cout << "Simple text to console" << std::endl;
-----------------------------------------------------------------------------------------------
 	#include "equation.h"
 
 Equation::ReadFromArray(const double** arr, const double* e)
